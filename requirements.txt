@@ -1,0 +1,6 @@
+Mezzanine==4.1.0
+owl.carousel
+aldryn-wow==1.0.0
+djangocms-owl
+django-fontawesome ==0.2.6
+

@@ -27,7 +27,7 @@ from fabric.decorators import hosts
 # Config setup #
 ################
 
-env.proj_app = real_project_name("cloudSolar")
+env.proj_app = real_project_name("test_project")
 
 conf = {}
 if sys.argv[0].split(os.sep)[-1] in ("fab", "fab-script.py"):

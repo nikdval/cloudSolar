@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+{% load pages_tags mezzanine_tags i18n staticfiles %}
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+
+{% ifinstalled mezzanine.blog %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+{% endifinstalled %}
+
+{% compress css %}
+<!-- Normalize -->
+<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}">
+<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+<link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
+<!-- Owl -->
+<link rel="stylesheet" type="text/css" href="{% static "css/owl.css" %}">
+<!-- Animate.css -->
+<link rel="stylesheet" type="text/css" href="{% static "css/animate.css" %}">
+<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.1.0/css/font-awesome.min.css" %}">
+<!-- Elegant Icons -->
+<link rel="stylesheet" type="text/css" href="{% static "fonts/eleganticons/et-icons.css" %}">
+<!-- Main style -->
+<link rel="stylesheet" type="text/css" href="{% static "css/cardio.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/cloudsolar.css" %}">
+
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" href="{% static "css/bootstrap-rtl.css" %}">
+{% endif %}
+{% ifinstalled cartridge.shop %}
+<link rel="stylesheet" href="{% static "css/cartridge.css" %}">
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
+{% endif %}
+{% endifinstalled %}
+{% block extra_css %}{% endblock %}
+{% endcompress %}
+
+{% compress js %}
+<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/bootstrap-extras.js" %}"></script>
+<script src="{% static "js/owl.carousel.min.js" %}"></script>
+<script src="{% static "js/wow.min.js" %}"></script>
+<script src="{% static "js/typewriter.js" %}"></script>
+<script src="{% static "js/jquery.onepagenav.js" %}"></script>
+<script src="{% static "js/main.js" %}"></script>
+{% block extra_js %}{% endblock %}
+{% endcompress %}
+
+<!--[if lt IE 9]>
+<script src="{% static "js/html5shiv.js" %}"></script>
+<script src="{% static "js/respond.min.js" %}"></script>
+<![endif]-->
+
+{% block extra_head %}{% endblock %}
+</head>
+
+<body id="{% block body_id %}body{% endblock %}">
+
+<div class="preloader">
+		<img src="img/loader.gif" alt="Preloader image">
+</div>
+<!--<div class="navbar navbar-default navbar-fixed-top" role="navigation">-->
+<nav class="navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img style="height:60px" src="static/img/logo-v2_white.png" data-active-url="static/img/logo-v2.png"  alt=""></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="#intro">Intro</a></li>
+					<li><a href="#features">Key Features</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+<header id="intro">
+		<div class="container">
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1 class="light white">Cloud Solar </h1>
+							<h4 class="white typed">allows utilities, developers, NGOs and product manufacturers to offer flexible solar solutions to off and on grid customers.</h4>
+							<span class="typed-cursor">|</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+<!--<div class="container">
+
+{% nevercache %}
+{% if messages %}
+<div class="messages">
+{% for message in messages %}
+<div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    {{ message }}
+</div>
+{% endfor %}
+</div>
+{% endif %}
+{% endnevercache %}
+
+<h1>{% block title %}{% endblock %}</h1>
+
+<ul class="breadcrumb">
+{% spaceless %}
+{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+{% endspaceless %}
+</ul>
+
+</div>-->
+
+<div class="container">
+<div class="row">
+
+<!--<div class="col-md-2 left">
+    {% block left_panel %}
+    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
+    {% endblock %}
+</div>-->
+
+<div class="col-md-7 middle">
+    {% block main %}{% endblock %}
+</div>
+
+<!--<div class="col-md-3 right">
+    {% nevercache %}
+    {% include "includes/language_selector.html" %}
+    {% include "includes/user_panel.html" %}
+    {% endnevercache %}
+    <div class="panel panel-default">
+    <div class="panel-body">
+    {% block right_panel %}
+    {% ifinstalled mezzanine.twitter %}
+    {% include "twitter/tweets.html" %}
+    {% endifinstalled %}
+    {% endblock %}
+    </div>
+    </div>
+</div>-->
+
+</div>
+</div>
+
+<footer>
+<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Reserve a Free Trial Class!</h3>
+					<h5 class="light regular light-white">Shape your body and improve your health.</h5>
+					<a href="#" class="btn btn-blue ripple trial-button">Start Free Trial</a>
+				</div>
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Opening Hours <span class="open-blink"></span></h3>
+					<div class="row opening-hours">
+						<div class="col-sm-6 text-center-mobile">
+							<h5 class="light-white light">Mon - Fri</h5>
+							<h3 class="regular white">9:00 - 22:00</h3>
+						</div>
+						<div class="col-sm-6 text-center-mobile">
+							<h5 class="light-white light">Sat - Sun</h5>
+							<h3 class="regular white">10:00 - 18:00</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-8">
+					<p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
+				</div>
+				<div class="col-sm-4 text-right text-center-mobile">
+					<ul class="social-footer">
+						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+<!--<div class="container">
+{% page_menu "pages/menus/footer.html" %}
+
+<div class="row">
+<p class="site-info text-center">
+    {% trans "Powered by" %}
+    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
+    <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
+    {% trans "and" %}
+    <a href="http://www.djangoproject.com">Django</a>
+    <span class="separator">|</span>
+    {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
+    {% ifinstalled mezzanine.mobile %}
+    <span class="separator">|</span>
+    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
+    {% endifinstalled %}
+</p>
+</div>
+</div>-->
+</footer>
+
+{% block footer_js %}
+{% include "includes/footer_scripts.html" %}
+{% endblock %}
+
+</body>
+</html>

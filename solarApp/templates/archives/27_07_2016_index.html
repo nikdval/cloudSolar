@@ -11,8 +11,9 @@
 {% block main %}
 {% blocktrans %}
 	<section>
-		<div class="cut cut-top"></div>
+<!--		<div class="cut cut-top"></div>-->
 		<div class="container">
+		<!--    ---------About section ----- -->
 <!--               Option I     -->
 	   			<!--<div class="row intro-tables">
 				<div class="col-md-11 col-md-offset-1">
@@ -83,55 +84,104 @@
 <!--	-----------------------------------------		-->
 		</div>
 	</section>
+	<!--    ---------End   About section ----- -->
+	<!--    ---------System section ----- -->
+	
+		<section id="system" class="section">
+<!--		 <img src="/static/img/electronics_01.jpg" class="img-responsive" alt="Responsive image">-->
+		<div class="container">
+			<div class="row title text-center">
+				<h2 class="margin-top white">Our System</h2>
+				<h4 class="light white">Cloud Solar integrates smart monitoring, control and payment technologies to allow users to pay as they go for solar energy, whilst providing technology owners the overview and control that they need to ensure that their operations run smoothly. </h4>
+				<h5 class="white regular light">For a detailed introduction for the management portal</h5>
+				<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Get in touch</a>
+			</div>
+			<div class="row no-margin">
+				<div class="col-md-10 no-padding col-md-offset-2 pricings text-center">
+					<div class="system">
+						<div class="box-main active" data-img="/static/img/electronics_01.jpg">
+							<h4 class="white">Managment Portal</h4>
+							
+							
+<!--							<p class="white regular light">Our system allows users to pay as they go for solar energy, whilst providing technology owners the overview and control that they need to ensure that their operations run smoothly. Our management portal allows users to see their system performance and pay their bills via a web or mobile interface, whilst system owners can remotely view and operate the systems.  <span class="small-font">/ year</span></p>-->
+							<i class="info-icon icon_question"></i>
+						</div>
+						<div class="box-second active">
+							<p class="white text-left">
+								Our management portal allows users to see their system performance and pay their bills via a web or mobile interface, whilst system owners can remotely view and operate the systems.
+							</p>
+							<img src="/static/media/uploads/cloud_solar_systems_and_functionality_schematic_v2.jpg" alt="system scematic" style="width:100%;">
+						</div>
+					</div>
+					<div class="system">
+						<div class="box-main" data-img="/static/img/electronics_02.jpg">
+							<h4 class="white">Hardware</h4>
+<!--							<h4 class="white regular light">$100.00 <span class="small-font">/ year</span></h4>-->
+<!--							<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Sign Up Now</a>-->
+							<i class="info-icon icon_question"></i>
+						</div>
+						<div class="box-second">
+						<p class="white text-left">
+								Our hardware has a modular design, meaning that you can add or remove features, depending on your needs and budget.
+							</p>
+							<img src="/static/media/uploads/2016_07_07-vn-hub_schematic-01.jpg" alt="Hub scematic" style="width:100%;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<!--    ---------End   System section ----- -->
+	<!--    ---------Features section ----- -->
 		<section id="features" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
 				<h2>Key Features</h2>
 			</div>
 			<div class="row features">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="feature">
 						<div class="icon-holder">
-							<img src="img/icons/heart-blue.png" alt="" class="icon">
+							<img src="static/img/icons/heart-blue.png" alt="" class="icon">
 						</div>
 						<h4 class="heading">Reduced hardware costs</h4>
 						<p class="description">We use a hub and node model to reduce costs to our clients. Only one hub is required in an area of [X] KM2, with data transfers from simple nodes, to more complex ‘hubs’ before being sent to the server.</p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="feature">
 						<div class="icon-holder">
-							<img src="img/icons/guru-blue.png" alt="" class="icon">
+							<img src="static/img/icons/guru-blue.png" alt="" class="icon">
 						</div>
-						<h4 class="heading">Yoga Pilates</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+						<h4 class="heading">Flexible payment options</h4>
+						<p class="description">Our system allows the project owners to create their own payment plans, whether based on flat rates, pay per unit, or any other method.</p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="feature">
 						<div class="icon-holder">
-							<img src="img/icons/weight-blue.png" alt="" class="icon">
+							<img src="static/img/icons/weight-blue.png" alt="" class="icon">
 						</div>
-						<h4 class="heading">Power Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+						<h4 class="heading">Use in unconnected areas</h4>
+						<p class="description">We use advanced communications technology to send data from unconnected regions, into connected areas and to our servers. This means Cloud Solar allows control of solar technology just about anywhere.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="feature">
+						<div class="icon-holder">
+							<img src="static/img/icons/weight-blue.png" alt="" class="icon">
+						</div>
+						<h4 class="heading">Connect in with your maintenance team</h4>
+						<p class="description">You can set customised alerts to be sent to your HQ or field agents, by SMS, email or push notifications, to ensure your repair and maintenance operations are responsive and effective.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="cut cut-bottom"></div>
 	</section>
-<!--<p>
-    Welcome to your new Mezzanine powered website.
-    Here are some quick links to get you started:
-</p>
-<ul>
-    <li><a href="/admin/">Log in to the admin interface</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">Creating custom page types</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">Modifying HTML templates</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">Changing this homepage</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">Other frequently asked questions</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li>
-</ul>-->
+	<!--    ---------End   Features section ----- -->
+
 {% endblocktrans %}
 {% endblock %}

@@ -86,6 +86,12 @@ h5 {
 h6 {
 	font-size: 16px;
 }
+a {
+	text-decoration: none;
+	color: #00a8ff;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
 
 ul.white-list {
 	padding: 0;
@@ -109,6 +115,7 @@ ul.white-list li:before {
 	background: white;
 }
 
+/* Header */
 header {
 	position: relative;
 	width: 100%;
@@ -152,13 +159,12 @@ header .typed-cursor {
 	animation-iteration-count: infinite;
 }
 
-a {
-	text-decoration: none;
-	color: #00a8ff;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
+
 /* Navigation Bar ( Navbar ) */
+.navbar {
+	top: 50px;
+}
+
 .navbar-brand{
     padding: 0 0;
 }
@@ -197,8 +203,8 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 .icon-bar {
 	background: #bbb;
 }
-/* Buttons */
 
+/* Buttons */
 .btn {
 	font-size: 18px;
 	display: inline-block;
@@ -221,18 +227,18 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 
 .btn.btn-green:hover {
-	background: #ccc;
+	background: #96cfb9;
 }
 
 .btn.btn-green-fill {
-	color: #00a8ff;
-	border-color: #00a8ff;
+	color: #00958B;
+	border-color: #00958B;
 	background: transparent;
 }
 
 .btn.btn-green-fill:hover {
 	color: white;
-	background: #00a8ff;
+	background: #00958B;
 }
 
 .btn.btn-white-fill {
@@ -242,8 +248,8 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 
 .btn.btn-white-fill:hover {
-	color: #00a8ff;
-	background: #fff;
+	color: #fff;
+	background: #5EB27E;
 }
 
 .btn.btn-gray-fill {
@@ -269,9 +275,7 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	margin: 0 10px;
 }
 
-.navbar {
-	top: 50px;
-}
+
 
 .container {
 	position: relative;
@@ -291,6 +295,7 @@ section {
 	padding: 140px 0 40px;
 }
 
+/* Cuts */
 .cut-top {
 	content: ' ';
 	position: absolute;
@@ -300,7 +305,17 @@ section {
 	width: 0;
 	height: 0;
 	border-top: 80px solid transparent;
-	border-right: 30px solid white;
+	
+}
+
+.cut-top-yellow{
+    border-right: 30px solid #D7D344;
+}
+.cut-top-red{
+    border-right: 30px solid #d6846e;
+}
+.cut-top-green{
+    border-right: 30px solid #00958B;
 }
 
 .cut-bottom {
@@ -314,6 +329,7 @@ section {
 	border-bottom: 80px solid transparent;
 	border-left: 30px solid white;
 }
+
 
 .intro-tables {
 	top: -130px;
@@ -577,38 +593,39 @@ section {
 .team .title {
 	margin: 50px 0;
 }
-/* Pricing */
 
-#pricing {
-	background: #00a8ff url('../img/pricing1.jpg') no-repeat center center;
+/* system */
+#system {
+	background: #00a8ff url('/static/img/electronics_01.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	-webkit-transition: background-image 0.6s linear 0.3s;
 	transition: background-image 0.6s linear 0.3s;
 }
-
-.owl-pricing img {
+.moving-box {
+	position: relative;
 	width: 100%;
 }
 
-.owl-pricing,
-.pricings {
+.owl-moving-box img {
+	width: 100%;
+}
+
+.owl-moving-box,
+.moving-boxes {
 	margin-top: 100px;
 	margin-bottom: 100px;
 }
 
-.pricing {
-	position: relative;
-	width: 100%;
-}
 
-.pricings .pricing .box-main,
-.pricings .pricing .box-second {
+
+.moving-boxes .moving-box .box-main,
+.moving-boxes .moving-box .box-second {
 	position: relative;
-	left: 25%;
+	//left: 25%;
 	display: inline-block;
-	width: 50%;
-	height: 300px;
+	//width: 50%;
+	height: 350px;
 	padding: 50px 40px;
 	background: #bbb;
 	-webkit-transition: -webkit-transform 0.3s, background-image 0.3s, opacity 0.3s;
@@ -617,16 +634,18 @@ section {
 	backface-visibility: hidden;
 }
 
-.pricings .pricing .box-main {
+.moving-boxes .moving-box .box-main {
+    width:30%;
 	z-index: 10;
 	padding-top: 40px;
 }
 
-.pricings .pricing .box-main:not(.active) {
+.moving-boxes .moving-box .box-main:not(.active) {
 	cursor: pointer;
+    left: 40%;
 }
 
-.pricings .pricing .box-main .info-icon {
+.moving-boxes .moving-box .box-main .info-icon {
 	font-size: 14px;
 	position: absolute;
 	top: 20px;
@@ -638,43 +657,44 @@ section {
 	transition: opacity 0.3s;
 }
 
-.pricings .pricing .box-main:not(.active) .info-icon {
+.moving-boxes .moving-box .box-main:not(.active) .info-icon {
 	opacity: 1;
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
 
-.pricings .pricing .box-main:not(.active):hover {
+.moving-boxes .moving-box .box-main:not(.active):hover {
 	background: #afafaf;
 }
 
-.pricings .pricing .box-main.active {
-	background: #00a8ff;
+.moving-boxes .moving-box .box-main.active {
+	background: #00958B;
 	-webkit-transform: translateX(-99%);
 	-ms-transform: translateX(-99%);
 	transform: translateX(-99%);
 }
 
-.pricings .pricing .box-second {
+.moving-boxes .moving-box .box-second {
+    width:70%;
 	position: absolute;
 	top: 0;
-	right: 0% !important;
+	right: -5% !important;
 	left: auto;
 	opacity: 0;
 	background: #afafaf;
 }
 
-.pricings .pricing .box-second.active {
+.moving-boxes .moving-box .box-second.active {
 	opacity: 1;
+	background: #00958B;
+}
+
+.moving-boxes .moving-box.active .box-main,
+.moving-boxes .moving-box .box-second {
 	background: #00a8ff;
 }
 
-.pricings .pricing.active .box-main,
-.pricings .pricing .box-second {
-	background: #00a8ff;
-}
-
-.pricings .pricing .box-main a.btn {
+.moving-boxes .moving-box .box-main a.btn {
 	margin-top: 50px;
 }
 
@@ -687,7 +707,7 @@ section {
 
 footer {
 	padding: 140px 0 40px;
-	background: url('../img/footer.jpg');
+	background: url('../img/electronics_02.jpg');
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -1042,8 +1062,8 @@ footer .social-footer li:hover a {
 	background: white;
 }
 
-.gray-bg {
-	background: #f7f7f7;
+.yellow-bg {
+	background: #D7D344;
 }
 
 .blue {
@@ -1095,27 +1115,27 @@ footer .social-footer li:hover a {
 }
 
 @media(max-width: 768px) {
-	.pricing {
+	.moving-box {
 		margin-bottom: 30px;
 	}
-	.pricings .pricing .info-icon {
+	.moving-boxes .moving-box .info-icon {
 		display: none;
 	}
-	.pricings .pricing .box-main,
-	.pricings .pricing .box-second {
+	.moving-boxes .moving-box .box-main,
+	.moving-boxes .moving-box .box-second {
 		left: 0;
 		width: 100%;
 		padding: 50px 50px 0;
 		text-align: left;
 		background: #00a8ff;
 	}
-	.pricings .pricing .box-main.active {
+	.moving-boxes .moving-box .box-main.active {
 		background: #00a8ff;
 		-webkit-transform: translateX(0%);
 		-ms-transform: translateX(0%);
 		transform: translateX(0%);
 	}
-	.pricings .pricing .box-second {
+	.moving-boxes .moving-box .box-second {
 		position: relative;
 		opacity: 1;
 	}
@@ -1137,7 +1157,7 @@ footer .social-footer li:hover a {
 	header .typed-cursor {
 		display: none;
 	}
-	.pricings .pricing .box-second {
+	.moving-boxes .moving-box .box-second {
 		padding-top: 0;
 	}
 }

@@ -94,13 +94,13 @@ jQuery(function($) {
 	});
 
 	// Pricing Box Click Event
-	$('.pricing .box-main').click(function() {
-		$('.pricing .box-main').removeClass('active');
-		$('.pricing .box-second').removeClass('active');
+	$('.moving-box .box-main').click(function() {
+		$('.moving-box .box-main').removeClass('active');
+		$('.moving-box .box-second').removeClass('active');
 		$(this).addClass('active');
 		$(this).next($('.box-second')).addClass('active');
-		$('#pricing').css("background-image", "url(" + $(this).data('img') + ")");
-		$('#pricing').css("background-size", "cover");
+		$('#system').css("background-image", "url(" + $(this).data('img') + ")");
+		$('#system').css("background-size", "cover");
 	});
 
 	// Mobile Nav

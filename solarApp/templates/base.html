@@ -85,7 +85,7 @@
     {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
     {% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg">{{ settings.SITE_TAGLINE }}</p>{% endif %}
     {% endblock%}-->
-				<a class="navbar-brand" href="#"><img style="height:60px" src="static/img/logo-v2_white.png" data-active-url="static/img/logo-v2.png"  alt=""></a>
+				<a class="navbar-brand" href="#"><img style="height:60px" src="/static/img/logo-v2_white.png" data-active-url="/static/img/logo-v2.png"  alt=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -105,16 +105,23 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+		<ul>
+		</ul>
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
 
-<header id="intro">
-		<div class="container">
+<header id="intro" >
+		<div class="container greenBgd">
 			<div class="table">
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<h1 class="white typed">Cloud Solar </h1>
-							<span class="typed-cursor">|</span>
-							<h4 class="light black">Allows utilities, developers, NGOs and product manufacturers to offer flexible solar solutions to off and on grid customers.</h4>
+							<span class="glyphicon glyphicon-certificate typed-cursor"> </span>
+                           
+							<h4 class=" light white">Allows utilities, developers, NGOs and product manufacturers to offer flexible solar solutions to off and on grid customers.</h4>
 							
 						</div>
 					</div>
@@ -158,6 +165,7 @@
 <footer id="contact">
 <div class="container">
 			<div class="row">
+			<div class="col-md-1"></div>
 				<div class="col-sm-6 text-center-mobile">
 					<h3 class="white">Contact us</h3>
 					<h5  class="light regular light-white">Email: <a href="mailto:info@scene.community">info@scene.community.</a></h5>
@@ -166,10 +174,11 @@
                    <h5 class="white">Our office addresses are:</h5>
                     <h5  class="light regular light-white">Edinburgh: ECCI, Infirmary Street, Edinburgh, EH1 1LZ</h5>
                         <h5  class="light regular light-white">London: 7 Cliff Road Studios, London, NW1 9AN</h5>
+                        <div class= "margin60"></div>
                     </div>
 					
 				</div>
-				<div class="col-sm-6 text-center-mobile">
+				<div class="col-sm-4 text-center-mobile">
 					<h3 class="white">Developed and supported by 
 <!--					<span class="open-blink"></span>-->
 					</h3>
@@ -201,11 +210,13 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row bottom-footer text-center-mobile">
+			<div class="col-md-1"></div>
 				<div class="col-sm-8">
 					<p>&copy; <a href="http://scene.community/">Scene</a> 2016. All rights reserved. 'Scene' is the Trading Name of Scene Consulting Ltd.</p>
 				</div>
-				<div class="col-sm-4 text-right text-center-mobile">
+				<div class="col-sm-3 text-center">
 					<ul class="social-footer">
 						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>

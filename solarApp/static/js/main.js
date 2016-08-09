@@ -52,7 +52,8 @@ jQuery(function($) {
 
 		// Typing Intro Init
 		$(".typed").typewriter({
-			speed: 60
+            delay: 50 ,
+			speed: 100
 		});
 
 		// Popup Form Init
@@ -168,4 +169,22 @@ jQuery(function($) {
 	$(window).on("resize", function() {
 		$('.modal:visible').each(centerModal);
 	});
+    /*------boxes click----*/
+$("#system").click(function() {
+   console.log("yess");
+//  $('.box').removeClass('big').addClass('small');
+//  $(this).addClass('big');
 });
+$('.boxes .box').click(function() {
+    console.log("yess");
+    alert("yess");
+		/*$('.moving-box .box-main').removeClass('active');
+		$('.moving-box .box-second').removeClass('active');
+		$(this).addClass('active');
+		$(this).next($('.box-second')).addClass('active');
+		$('#system').css("background-image", "url(" + $(this).data('img') + ")");
+		$('#system').css("background-size", "cover");*/
+	});
+});
+
+

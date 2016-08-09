@@ -1,119 +1,210 @@
-{% extends "base.html" %}
-{% load i18n %}
-
-{% block meta_title %}{% trans "Home" %}{% endblock %}
-{% block title %}{% trans "Home" %}{% endblock %}
-
-{% block breadcrumb_menu %}
+{% extends "base.html" %} {% load i18n %} {% block meta_title %}{% trans "Home" %}{% endblock %} {% block title %}{% trans "Home" %}{% endblock %} {% block breadcrumb_menu %}
 <li class="active">{% trans "Home" %}</li>
-{% endblock %}
+{% endblock %} {% block main %} {% blocktrans %}
+<section id="intro" class="section ">
+    <div class="cut cut-top cut-top-white"></div>
+    <div class="container">
+        <div class="row col-md-2"></div>
+        <div class="row col-md-8">
+            <!--				<h2 class="white">Our System</h2>-->
+            <h3 class="">The Cloud Solar product suite allows project owners to offer their services in a smarter way that involves lower overheads, lower investment risks, flexible tariffs and payment plans. </h3>
+            <h5 class="">Co-funded by Innovate UK and CORFO (Chile), Scene (UK) and Ciudad Luz (Chile) have developed Cloud Solar to allow the Energy Services Company (ESCo) model to be offered to users of solar energy. This is applicable to on-grid users, who choose to use solar energy, and also for the rural and urban poor; for whom Cloud Solar lowers barriers to accessing energy services.</h5>
+            <h5 class=" regular light">Cloud Solar has a modular hardware design, acknowledging the diversity of needs that exists within the solar energy sector – we are happy to create a bespoke system for your needs.</h5>
 
-{% block main %}
-{% blocktrans %}
-		<section id = "intro" class="section yellow-bg">
-		<div class="cut cut-top cut-top-yellow"></div>
-		<div class="container" >
-			<div class="row title">
-<!--				<h2 class="white">Our System</h2>-->
-				<h3 class="white">The Cloud Solar product suite allows project owners to offer their services in a smarter way that involves lower overheads, lower investment risks, flexible tariffs and payment plans. </h3>
-				<h5 class="white regular light">Co-funded by Innovate UK and CORFO (Chile), Scene (UK) and Ciudad Luz (Chile) have developed Cloud Solar to allow the Energy Services Company (ESCo) model to be offered to users of solar energy. This is applicable to on-grid users, who choose to use solar energy, and also for the rural and urban poor; for whom Cloud Solar lowers barriers to accessing energy services.</h5>
-				<h5 class="white regular light">Cloud Solar has a modular hardware design, acknowledging the diversity of needs that exists within the solar energy sector – we are happy to create a bespoke system for your needs.</h5>
-			
-			</div>
-<!-
--->
-		</div>
-	</section>
+        </div>
+ <div class="cut cut-bottom"></div>
+    </div>
+</section>
 
-	<!--    ---------End   About section ----- -->
-	<!--    ---------System section ----- -->
-	
-		<section id="system" class="section"  >
-<!--		 <img src="/static/img/electronics_01.jpg" class="img-responsive" alt="Responsive image">-->
-		<div class="container"   data-img="/static/img/electronics_01.jpg">
-				<div class="row title text-center">
-				<h2 class="white">Our System</h2>
-				<h4 class="light white">Cloud Solar integrates smart monitoring, control and payment technologies. </h4>
-				<h5 class="white regular light">For a detailed introduction for the management portal</h5>
-				<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Get in touch</a>
-			</div>
-			
-				<div class="boxes" >
-					<div class="box home" >
-							<h4 class="box-title white">Management Portal</h4>	
-						<span class="box-content">
+<!--    ---------End   About section ----- -->
+<!--    ---------System section ----- -->
+
+<section id="system" class="section">
+    <!--		 <img src="/static/img/electronics_01.jpg" class="img-responsive" alt="Responsive image">-->
+    <div class="container" data-img="../img/electronics_05-red.jpg">
+        <div class="row title text-center">
+            <h2 class="white">Our System</h2>
+            <h4 class="light white">Cloud Solar integrates smart monitoring, control and payment technologies. </h4>
+            <h5 class="white regular light">For a detailed introduction for the management portal</h5>
+            <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-white-fill">Get in touch</a>
+        </div>
+
+        <div class="boxes">
+            <div class="box hover-yellow " id= "management">
+                <h4 class="box-title white">Management Portal</h4>
+                <span class="box-content">
 							<p class=" grey text-left">
 								Our system allows users to pay as they go for solar energy, whilst providing technology owners the overview and control that they need to ensure that their operations run smoothly. Our management portal allows users to see their system performance and pay their bills via a web or mobile interface, whilst system owners can remotely view and operate the systems.
 							</p>
 							<img class="center-block" src=" " alt="system scematic" style="width:50%">
 						</span>
-					</div>
-					<div class="box about" >
-
-							<h4 class="center-block box-title white">Hardware</h4>
-						
-						<span class="box-content">
+            </div>
+            <div class="box hover-yellow " id="hardware">
+                <h4 class="box-title white">Hardware</h4>
+                <span class="box-content">
 						<p class="grey text-left">
 								Our hardware has a modular design, meaning that you can add or remove features, depending on your needs and budget.
 							</p>
 							<img class="center-block" src="" alt="Hub scematic" style="width:50%">
 						</span>
-					</div>
-				</div>
-			
-		</div>
-	</section>
-	
-	
-	<!--    ---------End   System section ----- -->
-	<!--    ---------Features section ----- -->
-		<section id="features" class="section section-padded">
-		<div class="container">
-			<div class="row text-center title">
-				<h2>Key Features</h2>
-			</div>
-			<div class="row features">
-				<div class="col-md-6">
-					<div class="feature">
-						<div class="icon-holder">
-							<img src="static/img/icons/hardware.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Reduced hardware costs</h4>
-						<p class=" grey description">We use a hub and node model to reduce costs to our clients. Only one hub is required in an area of [X] KM2, with data transfers from simple nodes, to more complex ‘hubs’ before being sent to the server.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="feature">
-						<div class="icon-holder">
-							<img src="static/img/icons/payments.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Flexible payment options</h4>
-						<p class="grey description">Our system allows the project owners to create their own payment plans, whether based on flat rates, pay per unit, or any other method.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="feature">
-						<div class="icon-holder">
-							<img src="static/img/icons/village.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Use in unconnected areas</h4>
-						<p class=" grey description">We use advanced communications technology to send data from unconnected regions, into connected areas and to our servers. This means Cloud Solar allows control of solar technology just about anywhere.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="feature">
-						<div class="icon-holder">
-							<img src="static/img/icons/admin.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Connect in with your maintenance team</h4>
-						<p class="grey description">You can set customised alerts to be sent to your HQ or field agents, by SMS, email or push notifications, to ensure your repair and maintenance operations are responsive and effective.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="cut cut-bottom"></div>
-	</section>
-	<!--    ---------End   Features section ----- -->
+            </div>
+        </div>
 
-{% endblocktrans %}
-{% endblock %}
+    </div>
+</section>
+
+
+<!--    ---------End   System section ----- -->
+<!--    ---------Features section ----- -->
+<section id="features" class="section section-padded">
+    <div class="container">
+        <div class="row text-center title">
+            <h2>Key Features</h2>
+        </div>
+        <div class="row features">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="feature">
+                    <div class="icon-holder">
+                        <img src="static/img/icons/hardware.png" alt="" class="icon">
+                    </div>
+                    <h4 class="heading">Reduced hardware costs</h4>
+                    <p class=" grey description">We use a hub and node model to reduce costs to our clients. Only one hub is required in an area of [X] KM2, with data transfers from simple nodes, to more complex ‘hubs’ before being sent to the server.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="feature">
+                    <div class="icon-holder">
+                        <img src="static/img/icons/payments.png" alt="" class="icon">
+                    </div>
+                    <h4 class="heading">Flexible payment options</h4>
+                    <p class="grey description">Our system allows the project owners to create their own payment plans, whether based on flat rates, pay per unit, or any other method.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="feature">
+                    <div class="icon-holder">
+                        <img src="static/img/icons/village.png" alt="" class="icon">
+                    </div>
+                    <h4 class="heading">Use in unconnected areas</h4>
+                    <p class=" grey description">We use advanced communications technology to send data from unconnected regions, into connected areas and to our servers. This means Cloud Solar allows control of solar technology just about anywhere.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="feature">
+                    <div class="icon-holder">
+                        <img src="static/img/icons/admin.png" alt="" class="icon">
+                    </div>
+                    <h4 class="heading">Connect in with your maintenance team</h4>
+                    <p class="grey description">You can set customised alerts to be sent to your HQ or field agents, by SMS, email or push notifications, to ensure your repair and maintenance operations are responsive and effective.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cut cut-bottom"></div>
+</section>
+<!--    ---------End   Features section ----- -->
+<!--    ---------Pricing section ----- -->
+<section id="pricing" class="section">
+    <div class="container" >
+        <div class="row title text-center">
+            <h2 class="margin-top white">Pricing</h2>
+
+        </div>
+                <div class="boxes">
+            <div class="box hover-green " id= "management">
+                <h4 class="box-title white">Software</h4>
+                <span class="box-content-green">
+							<h4 class=" grey text-center">
+								Coming Soon ...
+							</h4>
+						</span>
+            </div>
+            <div class="box hover-green" id="harware">
+                <h4 class="box-title white">Hardware</h4>
+                <span class="box-content">
+						<h4 class=" grey text-center">
+								Coming Soon ...
+							</h4>
+						</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!--    ---------End   Pricing section ----- -->
+<!--    ---------contact section ----- -->
+<!--<section id="contact" class="section">
+    <div class="container">
+        <div class="row title text-center">
+            <h2>Contact</h2>
+        </div>
+        <div>
+            <form action="" class="popup-form">
+                <table width="450px">
+                    </tr>
+                    <tr>
+                        <td valign="middle">
+                            <label class="grey" for="first_name">First Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input class="form-control form-grey" type="text" name="first_name" maxlength="50">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">
+                            <label class="form-label" for="last_name">Last Name *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="last_name" maxlength="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="email">Email Address *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="email" maxlength="80" size="30">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="telephone">Telephone Number</label>
+                        </td>
+                        <td valign="top">
+                            <input type="text" name="telephone" maxlength="30" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="comments">Comments *</label>
+                        </td>
+                        <td valign="top">
+                            <textarea name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center">
+                             We are grateful to you for keeping this link in place. thank you. 
+                            <input type="submit" value="Submit"> ( <a href="http://www.freecontactform.com/html_form.php">HTML Form</a> )
+                        </td>
+                    </tr>
+                </table>
+              
+					<input type="text" class="form-control form-grey" placeholder="Full Name">
+					<input type="text" class="form-control form-grey" placeholder="Email Address">
+
+					<div class="checkbox-holder text-left">
+						<div class="checkbox">
+							<input type="checkbox" value="None" id="squaredOne" name="check" />
+							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
+						</div>
+					</div>
+
+            </form>
+        </div>
+    </div>
+</section>-->
+
+{% endblocktrans %} {% endblock %}

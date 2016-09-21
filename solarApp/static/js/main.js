@@ -4,7 +4,7 @@ jQuery(function ($) {
 
     var owlPricing;
     var ratio = 2;
-
+    var owl = $("#owl-demo");
     // Window Load
     $(window).load(function () {
         // Preloader
@@ -21,25 +21,38 @@ jQuery(function ($) {
             var ratio = $('.parallax').width() / $('.parallax').height();
             $('.parallax img').css('height', ($(window).height()) + 'px');
             $('.parallax img').css('width', $('.parallax').height() * ratio + 'px');
+
         }
 
         //		$('header').height($(window).height() * 0.6); //header height
 
         cuts();
         $(window).resize(cuts);
-        // Sliders Init
-        $('.owl-schedule').owlCarousel({
-            singleItem: true,
-            pagination: true
+
+        // ---------------Into carousel-------------
+
+        // carousel setup
+        owl.owlCarousel({
+           items: 3, //10 items above 1000px browser width
+            itemsDesktop: [1000, 3], //5 items between 1000px and 901px
+            itemsDesktopSmall: [900, 3], // betweem 900px and 601px
+            itemsTablet: [780, 2], //2 items between 600 and 0
+            itemsMobile: [480, 1], // itemsMobile disabled - inherit from itemsTablet option
+            navigation: false, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            afterInit: customPager, // custom buttons
+            afterUpdate: customPager,
         });
-        $('.owl-testimonials').owlCarousel({
-            singleItem: true,
-            pagination: true
-        });
-        $('.owl-twitter').owlCarousel({
-            singleItem: true,
-            pagination: true
-        });
+        // owlres();
+        /*$('.owl-page').click( function() {
+           
+    var activeImg =$('.owl-page active span li');
+        var title = activeImg.attr('title');
+        console.log(activeImg);
+        $('.intro-title').html('<h2>' + title + '</h2>');
+    
+});*/
 
         // Navbar Init
         $('nav').addClass('original').clone().insertAfter('nav').addClass('navbar-fixed-top').css('position', 'fixed').css('top', '0').css('margin-top', '0').removeClass('original');
@@ -71,7 +84,11 @@ jQuery(function ($) {
             scrollSpeed: 400,
             filter: ':not(.btn)'
         });
+
     });
+
+
+
     // Window Scroll
     function onScroll() {
         if ($(window).scrollTop() > 50) {
@@ -142,7 +159,23 @@ jQuery(function ($) {
         }
     });
 
-    function centerModal() {
+    //-----------carousel custom dots-----
+    function customPager() {
+        //var customContainer = $('#custom-pagination-container');
+        var newDots = [];
+        $("#carousel-custom-dots li").each(function (i) {
+            newDots.push($(this));
+        });
+       $.each(this.owl.userItems, function (i) {
+        //$.each($('.owl-item'), function (i) {
+            var paginationLinks = $('.owl-controls .owl-pagination .owl-page span');
+            $(paginationLinks[i]).append(newDots[i]);
+        });
+    };
+
+
+
+    /*function centerModal() {
         $(this).css('display', 'block');
         var $dialog = $(this).find(".modal-dialog"),
             offset = ($(window).height() - $dialog.height()) / 2,
@@ -153,76 +186,79 @@ jQuery(function ($) {
         // the bottom margin of the modal
         if (offset < bottomMargin) offset = bottomMargin;
         $dialog.css("margin-top", offset);
-    }
+    }*/
 
-    $('.modal').on('show.bs.modal', centerModal);
+    /*$('.modal').on('show.bs.modal', centerModal);
 
     $('.modal-popup .close-link').click(function (event) {
         event.preventDefault();
         $('#modal1').modal('hide');
-    });
+    });*/
 
     $(window).on("resize", function () {
-        $('.modal:visible').each(centerModal);
+        // $('.modal:visible').each(centerModal);
+        customPager();
+
     });
     /*------boxes click----*/
-    
-$('.box').on('mouseenter', function () {
-		$('.box').addClass('small');
-    $(this).addClass('big');
-});
-$('.box').on('mouseleave', function () {
-		$('.box').removeClass('small');
-    $(this).removeClass('big');
-});
-$('.box').on('click', function () {
-		$('.box').removeClass('big');
-		$('.box').addClass('small');
-    $(this).addClass('big');
-    $('.box').off('mouseenter mouseleave');
-});
-  $('#system').on('click', function (e) {
-  			
+
+    $('.box').on('mouseenter', function () {
+        $('.box').addClass('small');
+        $(this).addClass('big');
+    });
+    $('.box').on('mouseleave', function () {
+        $('.box').removeClass('small');
+        $(this).removeClass('big');
+    });
+    $('.box').on('click', function () {
+        $('.box').removeClass('big');
+        $('.box').addClass('small');
+        $(this).addClass('big');
+        $('.box').off('mouseenter mouseleave');
+    });
+    $('#system').on('click', function (e) {
+
         if ($(e.target).is(".box") === false) {
             $('.box').removeClass('big');
             $(".box").removeClass('small');
             $('.box').on('mouseenter mouseleave');
         }
     });
-  
-
 
 
 });
 
 
 function cuts() {
+    console.log('yeeee');
     $('section .cut').each(function () {
         if ($(this).hasClass('cut-top'))
             $(this).css('border-right-width', $(this).parent().width() + "px");
+        else if ($(this).hasClass('cut-top-left-white'))
+            $(this).css('border-left-width', $(this).parent().width() + "px");
         else if ($(this).hasClass('cut-bottom'))
             $(this).css('border-left-width', $(this).parent().width() + "px");
     });
 }
 
+
 /*------boxes click----*/
 function boxMove(box) {
-      $(box).on('mouseenter', function () {
+    $(box).on('mouseenter', function () {
         $('.box').removeClass('big');
         $(".box").addClass('small');
         $(this).addClass('big');
-    }); 
+    });
     $(box).on('mouseleave', function () {
         $('.box').removeClass('big');
-        $(".box").removeClass('small');   
-    }); 
-    
+        $(".box").removeClass('small');
+    });
+
     $(box).on('click', function () {
         $('.box').removeClass('big');
         $(".box").addClass('small');
-        $(box).addClass('big'); 
+        $(box).addClass('big');
         $('.box').off('mouseenter mouseleave');
         alert("move");
     });
 }
-

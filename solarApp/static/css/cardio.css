@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 body {
-	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Raleway','Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
 	color: #2a3237;
@@ -47,36 +47,39 @@ body {
 /* Typography */
 
 p {
+    font-family: 'Raleway','Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.5;
+	//line-height: 1.5;
 	color: #fff;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+h4
+{
+	font-family: 'Amatic SC','Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	position: relative;
 	margin: 10px 0;
+    font-weight: bold;
 }
 
 h1 {
-	font-size: 60px;
+    font-family: 'Amatic SC', cursive;
+	font-size: 80px;
 }
 
 h2 {
-	font-size: 48px;
+    font-family: 'Amatic SC', cursive;
+	font-size: 60px;
 }
 
 h3 {
-	font-size: 30px;
+	font-size: 50px;
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 35px;
 }
 
 h5 {
@@ -264,13 +267,13 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	background: #5EB27E;
 }
 
-.btn.btn-gray-fill {
+.btn.btn-grey-fill {
 	color: #fff;
 	border-color: #fff;
 	background: transparent;
 }
 
-.btn.btn-gray-fill:hover {
+.btn.btn-grey-fill:hover {
 	border-color: #bbb;
 	background: #bbb;
 }
@@ -308,7 +311,7 @@ section {
 }
 
 #system {
-   height: 650px;
+   height: 750px;
     //height: 100%;
 	background: #00a8ff url('/static/img/electronics_05-red.jpg') no-repeat center center;
     //background: #DAD347 ;
@@ -338,11 +341,21 @@ section {
 	width: 0;
 	height: 0;
 	border-top: 80px solid transparent;
-	
 }
 
 .cut-top-white{
     border-right: 30px solid #fff;
+}
+.cut-top-left-white{
+    content: ' ';
+	position: absolute;
+	z-index: 1;
+	top: -79px;
+	left: 15px;
+	width: 0;
+	height: 0;
+	border-top: 80px solid transparent;
+    border-left: 30px solid #fff;
 }
 .cut-top-yellow{
     border-right: 30px solid #D7D344;
@@ -739,7 +752,7 @@ section {
 /* Footer */
 
 footer {
-	padding: 40px 0 40px;
+	padding: 40px 0 20px;
 	background: url('../img/electronics_green-yellow.jpg');
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -785,8 +798,7 @@ footer .margin60 {
 }
 
 footer .bottom-footer {
-	margin-top: 80px;
-    padding-left: 15px;
+	margin-top: 40px;
 }
 
 footer .social-footer {
@@ -1187,6 +1199,10 @@ footer .social-footer li:hover a {
 		padding-left: 30px;
 	}
     
+    #system {
+   height: 100%;
+    }
+    
 }
 
 @media(max-width: 400px) {
@@ -1197,7 +1213,7 @@ footer .social-footer li:hover a {
 		padding-top: 0;
 	}
     #system {
-    height: 1000px;
+    //height: 1100px;
     }
 }
 

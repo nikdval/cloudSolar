@@ -14,7 +14,7 @@ body {
 /* Text colors*/
 
 .black {
-    color: black;
+    color: #000000;
 }
 
 .grey {
@@ -23,6 +23,9 @@ body {
 
 .yellow {
     color: #DAD347;
+}
+.green{
+    color: #00968B;
 }
 
 
@@ -68,10 +71,124 @@ body {
     margin-right: 1%;   
 }
 
+.top-up{
+    top: -140px;
+    position: relative;
+}
+
+#intro{
+    padding-top: 0;
+}
+
+/* carousel--*/
+#owl-demo{
+    margin-top: 100px;
+}
+ #owl-demo .owl-controls {
+      width: 100%;
+  position: absolute;
+  top: -100px;
+}
+
+#owl-demo .item{   
+    height: 350px;
+ // background: #898989;
+  background: #96CFB9;
+  color: #FFF;
+  text-align: center;
+    border-width: 4px 2.5px;
+    border-color: #00968B;
+    border-style: solid dashed;
+}
+#owl-demo .item img{
+  display: block;
+  //width: 100%;
+  height: 100%;
+    text-align: center;
+}
+
+#owl-demo .item p{
+    font-size: 17px;
+    text-align: justify;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin:15px 25px;
+} 
+#owl-demo .item h4{
+    font-size: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+   // top: -200px;
+}
+
+.owl-controls .owl-page {
+	display: inline-block;
+	zoom: 1;
+}
+.owl-controls .owl-page span {
+	display: block;
+	margin: 30px 80px;
+	line-height: 1.0;
+    font-size: 50px;
+    background: none;
+	color:  #96CFB9;
+	text-transform: uppercase;
+}
+ .owl-controls .owl-page.active span {
+	color: #DAD347;
+}
+
+
+
+.intro-img{
+    margin-top: 20px;
+    background-color: #fff;
+    //max-height: 400px;
+    text-align: center;
+}
+
+/*old carousel*/
+.carousel-inner{
+    //background-color: #DAD347;
+     //height:360px;
+    //align-items: center;
+    
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      /*padding: 15px 60px;*/
+      max-height:330px;
+      margin:20px auto;
+     /* background-position:center;
+        background-size:cover;
+*/   
+  }
+.carousel-control.right,
+.carousel-control.left
+{
+    //background-color: #DAD347;
+    background-image: none;
+   // top:-300px;
+}
+.carousel-control{
+    color: #00968B;
+}
+.carousel-control:hover{
+    color: #DAD347;
+}
+/* -------Hidden text--------*/
+.read-more{
+    //min-height: 0px;
+    //visibility: hidden;
+}
+
 /* ------------ Boxes animation-----*/
 
 .boxes {
-    margin-top: 50px ;
+    margin-top: 30px ;
 }
 .box {
     background-color: rgba(0, 149, 139, 0.7);
@@ -171,7 +288,20 @@ body {
     color: #898989;
 }
 
+@media (max-width: 1280px) {
+    
+    #owl-demo .item p{
+    font-size: 15px;
+
+} 
+#owl-demo .item h4{
+    font-size: 25px;
+    
+}
+}
+
 @media (max-width: 991px) {
+    
     .logo-mobile {
     width: 18%;
     height: 20px;
@@ -179,16 +309,31 @@ body {
     padding-left: 15px;
     float: left;
     }
+     .owl-controls .owl-page span {
+	margin: 15px 25px;
+	line-height: 1.0;
+    font-size: 40px;
+}
+    
+    #owl-demo .item p{
+    font-size: 13px;
+
+} 
+#owl-demo .item h4{
+    font-size: 20px;
+    
+}
 }
 
 @media (min-width: 780px) {
     .container {
-        width: 100%;
+        width: 80%;
     }
-     
+       
 }
 
 @media only screen and (max-width: 768px) {
+
     .box {
         width: 95%;
         margin-bottom: 20px;
@@ -209,6 +354,33 @@ body {
     .pricing-first{
          margin-top: -50px;
     }
+    
+    #owl-demo .second {
+  display: none;
+  width: 100%;
+  height: 0;
+}
+    
+ #owl-demo .item {
+      max-height:290px;
+      margin:20px auto;
+    
+  }
+    #owl-demo .item p{
+    font-size: 13px;
+
+} 
+#owl-demo .item h4{
+    font-size: 20px;
+    
+}
+ 
+    .owl-controls .owl-page span {
+        
+	margin: 15px 30px;
+	line-height: 1.0;
+    font-size: 40px;
+}
    
 }
 
@@ -216,5 +388,26 @@ body {
     .navbar {
         top: 0px;
     }
+       #owl-demo .item {
+      /*padding: 15px 60px;*/
+      max-height:300px;
+      margin:0 auto;
+     /* background-position:center;
+        background-size:cover;
+*/   
+  }
+
+    #owl-demo .first {
+  display: none;
+  //width: 100%;
+  height: 0;
+}
+
+    .owl-controls .owl-page span {
+	margin: 15px 35px;
+	line-height: 1.0;
+    font-size: 30px;
+}
+   
     
 }

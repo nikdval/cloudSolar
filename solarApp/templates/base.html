@@ -22,9 +22,13 @@
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
 <link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
 <!-- Owl -->
-<link rel="stylesheet" type="text/css" href="{% static "css/owl.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/owl.carousel.css" %}">
 <!-- Animate.css -->
 <link rel="stylesheet" type="text/css" href="{% static "css/animate.css" %}">
+<!--Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.1.0/css/font-awesome.min.css" %}">
 <!-- Elegant Icons -->
@@ -97,7 +101,7 @@
 					<li><a href="#contact">Contact</a></li>
 <!--					 {% block navbar_search_form %}{% search_form "all" %}{% endblock %}-->
 <!--    {% block navbar_dropdown_menu %}{% page_menu "pages/menus/dropdown.html" %}{% endblock%}-->
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-green">Sign In</a></li>
+					<li><a href="http://www.cloud-solar.com/CloudSolar/login"  target="_blank" class="btn btn-green">Sign In</a></li>
 					
 				</ul>
 			</div>
@@ -121,7 +125,7 @@
 							<h1 class="white typed">Cloud Solar </h1>
 							<span class="glyphicon glyphicon-certificate typed-cursor"> </span>
                            
-							<h4 class=" light white">Allows utilities, developers, NGOs and product manufacturers to offer flexible solar solutions to off and on grid customers.</h4>
+							<h3 class=" light white">Smart  <span class="glyphicon glyphicon-cog" style="font-size:25px; font-weight:lighter;"> </span>  Flexible  <span class="glyphicon glyphicon-cog" style="font-size:25px;"> </span> Affordable</span> </h3>
 							
 						</div>
 					</div>
@@ -165,20 +169,23 @@
 <footer id="contact">
 <div class="container">
         	<div class="row col-lg-2 col-md-1"></div>
-			<div class="row col-lg-8 col-md-10">
-		
+			<div class="row col-lg-10 col-md-10 text-center-mobile">
 				<div class="col-md-6 text-center-mobile">
 					<h3 class="white">Contact us</h3>
-					<h5  class="light regular light-white">Email: <a href="mailto:info@scene.community">info@scene.community.</a></h5>
-                    <h5 class="light regular light-white"> Tel: +44 (0)131 651 4556 </h5>
+                    <h5  class="white">Email: </h5>
+                 <h6><a href=""mailto:info@cloud-solar.com?subject=Cloud Solar>info@cloud-solar.com</a></h6>
+                  <h6><a href="mailto:info@scene.community">info@scene.community</a></h6>
+                   
+                    <h5 class="regular white"> Tel: +44 (0)131 651 4556 </h5>
                     <div class="margin60 "> 
                    <h5 class="white">Our office addresses are:</h5>
-                    <h5  class="light regular light-white">Edinburgh: ECCI, Infirmary Street, Edinburgh, EH1 1LZ</h5>
-                        <h5  class="light regular light-white">London: 7 Cliff Road Studios, London, NW1 9AN</h5>
+                    <h6  class="regular white">Edinburgh: ECCI, Infirmary Street, Edinburgh, EH1 1LZ</h6>
+                        <h6  class="regular white">London: 7 Cliff Road Studios, London, NW1 9AN</h6>
                         <div class= "margin60"></div>
                     </div>
 					
 				</div>
+				
 				<div class="col-md-6 text-center-mobile">
 					<h3 class="white">Developed by:
 <!--					<span class="open-blink"></span>-->
@@ -214,44 +221,18 @@
                     </div>	
                 </div>   
 						</div>					
-					
 				</div>
 			</div>
 			
-			<div class="row bottom-footer text-center-mobile">
-			<div class="col-md-1"></div>
-				<div class="col-sm-8">
-					<p>&copy; <a href="http://scene.community/">Scene</a> 2016. All rights reserved. 'Scene' is the Trading Name of Scene Consulting Ltd.</p>
+			<div class="bottom-footer text-center-mobile">
+			<div class="col-lg-2 col-md-1"></div>
+			<div class="row col-lg-10 col-md-10 text-center">
+					<h6>&copy; <a href="http://scene.community/">Scene</a> 2016. All rights reserved. 'Scene' is the Trading Name of Scene Connect Ltd.</h6>
 				</div>
-				<div class="col-sm-3 text-center">
-					<ul class="social-footer">
-						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
-					</ul>
-				</div>
+				
 			</div>
 
 		</div>
-<!--<div class="container">
-{% page_menu "pages/menus/footer.html" %}
-
-<div class="row">
-<p class="site-info text-center">
-    {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    <span class="separator">|</span>
-    {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-    {% endifinstalled %}
-</p>
-</div>
-</div>-->
 </footer>
 
 {% block footer_js %}

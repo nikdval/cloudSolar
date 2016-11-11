@@ -84,8 +84,8 @@ body {
 #owl-demo{
     margin-top: 100px;
 }
- #owl-demo .owl-controls {
-      width: 100%;
+ #owl-demo .owl-pagination {
+    width: 100%;
   position: absolute;
   top: -100px;
 }
@@ -123,24 +123,22 @@ body {
     position: absolute;
    // top: -200px;
 }
-
-.owl-controls .owl-page {
-	display: inline-block;
+.owl-theme .owl-controls .owl-page{
+    display: inline-block;
 	zoom: 1;
 }
-.owl-controls .owl-page span {
-	display: block;
-	margin: 30px 80px;
+
+.owl-theme .owl-controls .owl-page span{
+	padding: 30px 80px;
 	line-height: 1.0;
     font-size: 50px;
     background: none;
 	color:  #96CFB9;
-	text-transform: uppercase;
+	text-transform: uppercase;  
 }
- .owl-controls .owl-page.active span {
-	color: #DAD347;
+.owl-theme .owl-controls .owl-page.active span {
+color: #DAD347; 
 }
-
 
 
 .intro-img{
@@ -150,40 +148,7 @@ body {
     text-align: center;
 }
 
-/*old carousel*/
-.carousel-inner{
-    //background-color: #DAD347;
-     //height:360px;
-    //align-items: center;
-    
-}
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      /*padding: 15px 60px;*/
-      max-height:330px;
-      margin:20px auto;
-     /* background-position:center;
-        background-size:cover;
-*/   
-  }
-.carousel-control.right,
-.carousel-control.left
-{
-    //background-color: #DAD347;
-    background-image: none;
-   // top:-300px;
-}
-.carousel-control{
-    color: #00968B;
-}
-.carousel-control:hover{
-    color: #DAD347;
-}
-/* -------Hidden text--------*/
-.read-more{
-    //min-height: 0px;
-    //visibility: hidden;
-}
+
 
 /* ------------ Boxes animation-----*/
 
@@ -288,7 +253,7 @@ body {
     color: #898989;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
     
     #owl-demo .item p{
     font-size: 15px;
@@ -309,8 +274,8 @@ body {
     padding-left: 15px;
     float: left;
     }
-     .owl-controls .owl-page span {
-	margin: 15px 25px;
+    .owl-theme .owl-controls .owl-page span {
+	padding: 15px 25px;
 	line-height: 1.0;
     font-size: 40px;
 }
@@ -345,22 +310,12 @@ body {
         width: 100%;
         height: 100%;
     }
-      .pricing-box {
-        min-height: 250px;
-        width:95%;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-    .pricing-first{
-         margin-top: -50px;
-    }
     
-    #owl-demo .second {
+   #owl-demo .second {
   display: none;
   width: 100%;
   height: 0;
-}
-    
+}  
  #owl-demo .item {
       max-height:290px;
       margin:20px auto;
@@ -375,9 +330,8 @@ body {
     
 }
  
-    .owl-controls .owl-page span {
-        
-	margin: 15px 30px;
+.owl-theme .owl-controls .owl-page span {      
+	padding: 15px 30px;
 	line-height: 1.0;
     font-size: 40px;
 }
@@ -388,23 +342,19 @@ body {
     .navbar {
         top: 0px;
     }
-       #owl-demo .item {
-      /*padding: 15px 60px;*/
-      max-height:300px;
-      margin:0 auto;
-     /* background-position:center;
-        background-size:cover;
-*/   
-  }
-
-    #owl-demo .first {
+#owl-demo .first {
   display: none;
   //width: 100%;
   height: 0;
 }
+       #owl-demo .item {
+      max-height:300px;
+      padding:0 auto;
+  }
 
-    .owl-controls .owl-page span {
-	margin: 15px 35px;
+
+   .owl-theme .owl-controls .owl-page span {
+	padding: 15px 35px;
 	line-height: 1.0;
     font-size: 30px;
 }
